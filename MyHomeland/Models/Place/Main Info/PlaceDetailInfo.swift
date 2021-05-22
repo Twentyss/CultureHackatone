@@ -1,0 +1,8 @@
+
+extension Place {
+    
+    struct DetailInfo {
+        
+    }
+    
+}

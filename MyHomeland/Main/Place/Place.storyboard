@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gwQ-yW-GC7">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Place View Controller-->
+        <scene sceneID="gsd-GB-Ajj">
+            <objects>
+                <viewController id="gwQ-yW-GC7" customClass="PlaceViewController" customModule="MyHomeland" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qkV-6V-0GU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfN-nr-kUI" customClass="CustomSegmentedControl" customModule="MyHomeland" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="343" height="31"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="76x-c4-BsQ"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6a-Ha-Uuf">
+                                <rect key="frame" x="0.0" y="115" width="375" height="663"/>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YDp-2C-hCL"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.94117647059999998" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YDp-2C-hCL" firstAttribute="trailing" secondItem="W6a-Ha-Uuf" secondAttribute="trailing" id="5g4-mg-uJK"/>
+                            <constraint firstItem="W6a-Ha-Uuf" firstAttribute="top" secondItem="gfN-nr-kUI" secondAttribute="bottom" constant="24" id="QNr-Eg-nKM"/>
+                            <constraint firstItem="W6a-Ha-Uuf" firstAttribute="leading" secondItem="YDp-2C-hCL" secondAttribute="leading" id="ahC-Gh-zlP"/>
+                            <constraint firstItem="YDp-2C-hCL" firstAttribute="bottom" secondItem="W6a-Ha-Uuf" secondAttribute="bottom" id="cdh-8s-Hpn"/>
+                            <constraint firstItem="gfN-nr-kUI" firstAttribute="leading" secondItem="YDp-2C-hCL" secondAttribute="leading" constant="16" id="fge-Ti-9um"/>
+                            <constraint firstItem="gfN-nr-kUI" firstAttribute="top" secondItem="YDp-2C-hCL" secondAttribute="top" constant="16" id="rGx-aS-mbZ"/>
+                            <constraint firstItem="gfN-nr-kUI" firstAttribute="centerX" secondItem="qkV-6V-0GU" secondAttribute="centerX" id="vu6-6h-DgI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="W6a-Ha-Uuf" id="VvR-x4-Pyw"/>
+                        <outlet property="segmentedControl" destination="gfN-nr-kUI" id="Tb1-2n-Wf0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pYd-ja-yAz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="61"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hdH-S4-rrT">
+            <objects>
+                <viewController storyboardIdentifier="placeInfo" id="zbA-hP-xCg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="41u-f5-vW2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M51-bX-rFp">
+                                <rect key="frame" x="173" y="395.66666666666669" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M51-bX-rFp" firstAttribute="centerX" secondItem="41u-f5-vW2" secondAttribute="centerX" id="FG8-0O-i2R"/>
+                            <constraint firstItem="M51-bX-rFp" firstAttribute="centerY" secondItem="41u-f5-vW2" secondAttribute="centerY" id="jDp-CI-dVd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dn2-4w-cLK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

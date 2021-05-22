@@ -1,0 +1,6 @@
+framework module Pods_MyHomeland {
+  umbrella header "Pods-MyHomeland-umbrella.h"
+
+  export *
+  module * { export * }
+}

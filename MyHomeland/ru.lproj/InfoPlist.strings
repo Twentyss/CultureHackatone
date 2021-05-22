@@ -1,0 +1,3 @@
+CFBundleDisplayName = "Мой край";
+NSPhotoLibraryUsageDescription = "Разрешите доступ к Вашим фото.";
+NSCameraUsageDescription = "Приложению необходим доступ к камере.";
