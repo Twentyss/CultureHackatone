@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Semibold.ttf">
+            <string>SFUIText-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Routes View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="RoutesViewController" customModule="MyHomeland" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KMd-fs-cZo">
+                                <rect key="frame" x="0.0" y="30" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Маршруты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwf-Wb-IdG">
+                                <rect key="frame" x="20" y="208" width="132" height="29"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="24"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HgG-kV-zmi">
+                                <rect key="frame" x="0.0" y="257" width="414" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nfu-7I-jfQ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RouteCell" id="aA6-Ui-Atj">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="34j-ZX-6fk">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="X7e-bY-ZyZ"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Jej-DN-LYG"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Создать свой маршрут" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yix-g2-tJf">
+                                <rect key="frame" x="107" y="123" width="212.5" height="21"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Semibold" family="SF UI Text" pointSize="18"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-G8-l6e" customClass="CustomButton" customModule="MyHomeland" customModuleProvider="target">
+                                <rect key="frame" x="20" y="101" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="uNB-Pp-Vtr"/>
+                                    <constraint firstAttribute="width" constant="67" id="yqo-bz-OIH"/>
+                                </constraints>
+                                <state key="normal" image="addPhotoButtonPlus"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yix-g2-tJf" firstAttribute="leading" secondItem="3RY-G8-l6e" secondAttribute="trailing" constant="20" id="4BL-Bo-aGP"/>
+                            <constraint firstAttribute="bottom" secondItem="HgG-kV-zmi" secondAttribute="bottom" id="4ml-Bf-rjE"/>
+                            <constraint firstItem="Mwf-Wb-IdG" firstAttribute="top" secondItem="3RY-G8-l6e" secondAttribute="bottom" constant="40" id="6gs-w7-Sko"/>
+                            <constraint firstItem="Mwf-Wb-IdG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ENM-OE-6xg"/>
+                            <constraint firstItem="HgG-kV-zmi" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TNz-qD-u18"/>
+                            <constraint firstItem="yix-g2-tJf" firstAttribute="top" secondItem="KMd-fs-cZo" secondAttribute="bottom" constant="42" id="UeH-iB-VzV"/>
+                            <constraint firstItem="KMd-fs-cZo" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="VBq-Cp-Hro"/>
+                            <constraint firstItem="3RY-G8-l6e" firstAttribute="top" secondItem="KMd-fs-cZo" secondAttribute="bottom" constant="20" id="cEu-uG-s2x"/>
+                            <constraint firstItem="KMd-fs-cZo" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="30" id="d7V-GU-gFS"/>
+                            <constraint firstItem="3RY-G8-l6e" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="o7r-11-WbK"/>
+                            <constraint firstItem="HgG-kV-zmi" firstAttribute="top" secondItem="Mwf-Wb-IdG" secondAttribute="bottom" constant="20" id="r9c-RB-Zep"/>
+                            <constraint firstItem="KMd-fs-cZo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="voz-G1-u06"/>
+                            <constraint firstItem="HgG-kV-zmi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wkc-Yn-Fe9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BRU-z5-AOF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addPhotoButtonPlus" width="36.5" height="36.5"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

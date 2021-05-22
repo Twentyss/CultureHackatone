@@ -1,10 +1,3 @@
-//
-//  EventsViewController.swift
-//  MyHomeland
-//
-//  Created by Александр Вторников on 12.11.2020.
-//
-
 import UIKit
 
 class EventsViewController: UIViewController {

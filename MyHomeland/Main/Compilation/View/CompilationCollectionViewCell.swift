@@ -1,10 +1,3 @@
-//
-//  CompilationCollectionViewCell.swift
-//  MyHomeland
-//
-//  Created by Александр Вторников on 06.11.2020.
-//
-
 import UIKit
 import Kingfisher
 

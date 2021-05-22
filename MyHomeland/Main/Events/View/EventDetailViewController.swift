@@ -1,10 +1,3 @@
-//
-//  EventDetailViewController.swift
-//  MyHomeland
-//
-//  Created by Александр Вторников on 17.11.2020.
-//
-
 import UIKit
 import Kingfisher
 

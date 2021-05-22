@@ -1,10 +1,3 @@
-//
-//  CompilationCollectionViewCellViewModel.swift
-//  MyHomeland
-//
-//  Created by Александр Вторников on 10.11.2020.
-//
-
 import Foundation
 
 

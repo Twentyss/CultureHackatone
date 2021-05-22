@@ -1,10 +1,3 @@
-//
-//  CompilationDetailViewController.swift
-//  MyHomeland
-//
-//  Created by Александр Вторников on 10.11.2020.
-//
-
 import UIKit
 
 class CompilationDetailViewController: UIViewController {

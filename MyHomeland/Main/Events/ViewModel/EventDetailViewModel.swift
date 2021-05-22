@@ -1,10 +1,3 @@
-//
-//  EventDetailViewModel.swift
-//  MyHomeland
-//
-//  Created by Александр Вторников on 17.11.2020.
-//
-
 import Foundation
 
 class EventDetailViewModel {
