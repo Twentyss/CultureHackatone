@@ -11,6 +11,7 @@
 		099D06792659471A002E68B4 /* RoutesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D06782659471A002E68B4 /* RoutesViewModel.swift */; };
 		09B004C02659340600911CD3 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B004BF2659340600911CD3 /* RoutesViewController.swift */; };
 		09B004C3265935B000911CD3 /* Routes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B004C2265935B000911CD3 /* Routes.storyboard */; };
+		09D3233F2659B46600D7ADF1 /* RouteCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D3233E2659B46600D7ADF1 /* RouteCellViewModel.swift */; };
 		1F004371254AC3C600EB27AF /* ConcaveNeumorphismLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00436F254AC3C600EB27AF /* ConcaveNeumorphismLayer.swift */; };
 		1F004372254AC3C600EB27AF /* ConvexNeumorphismLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F004370254AC3C600EB27AF /* ConvexNeumorphismLayer.swift */; };
 		1F004375254AC3F000EB27AF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F004374254AC3F000EB27AF /* CustomButton.swift */; };
@@ -88,6 +89,7 @@
 		099D06782659471A002E68B4 /* RoutesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewModel.swift; sourceTree = "<group>"; };
 		09B004BF2659340600911CD3 /* RoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
 		09B004C2265935B000911CD3 /* Routes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Routes.storyboard; sourceTree = "<group>"; };
+		09D3233E2659B46600D7ADF1 /* RouteCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCellViewModel.swift; sourceTree = "<group>"; };
 		1F00436F254AC3C600EB27AF /* ConcaveNeumorphismLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcaveNeumorphismLayer.swift; sourceTree = "<group>"; };
 		1F004370254AC3C600EB27AF /* ConvexNeumorphismLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvexNeumorphismLayer.swift; sourceTree = "<group>"; };
 		1F004374254AC3F000EB27AF /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -185,18 +187,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		099D0676265946EE002E68B4 /* ViewController */ = {
+		099D0676265946EE002E68B4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				09D323402659D0F000D7ADF1 /* CollectionView */,
 				09B004BF2659340600911CD3 /* RoutesViewController.swift */,
-				0993946E265966310032EBE0 /* RouteCollectionViewCell.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		099D067726594704002E68B4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				09D3233E2659B46600D7ADF1 /* RouteCellViewModel.swift */,
 				099D06782659471A002E68B4 /* RoutesViewModel.swift */,
 			);
 			path = ViewModel;
@@ -206,10 +209,18 @@
 			isa = PBXGroup;
 			children = (
 				099D067726594704002E68B4 /* ViewModel */,
-				099D0676265946EE002E68B4 /* ViewController */,
+				099D0676265946EE002E68B4 /* ViewControllers */,
 				09B004C2265935B000911CD3 /* Routes.storyboard */,
 			);
 			path = Routes;
+			sourceTree = "<group>";
+		};
+		09D323402659D0F000D7ADF1 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0993946E265966310032EBE0 /* RouteCollectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		1F004368254AC38800EB27AF /* NeumorphismLayers */ = {
@@ -991,6 +1002,7 @@
 				6B14CBB9255419F4001711F4 /* UIViewControllerTopAndBottomSpaces.swift in Sources */,
 				6BFF8351254AAE6300E125C8 /* UserAuthInfo.swift in Sources */,
 				6B390526254390940040D1AE /* SignInAppleDelegate.swift in Sources */,
+				09D3233F2659B46600D7ADF1 /* RouteCellViewModel.swift in Sources */,
 				1F004375254AC3F000EB27AF /* CustomButton.swift in Sources */,
 				1F0043BC254ADE0000EB27AF /* CustomTabBarControllerExtension.swift in Sources */,
 				6B39052A2543911B0040D1AE /* SignIn.swift in Sources */,
