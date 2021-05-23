@@ -46,4 +46,20 @@ extension AppDatabase {
         }
     }
     
+    func observeAllPlaces(completion: @escaping ([Place]?) -> ()) {
+        self.reference.child("place").observe(.value) { (snapshot) in
+            guard let value = snapshot.value as? [String: AnyObject] else {
+                completion(nil)
+                return
+            }
+            let jsonValue = JSON(value)
+            var places: [Place] = []
+            for jsonItem in jsonValue {
+                let item = Place(id: jsonItem.0, json: jsonItem.1)
+                places.append(item)
+            }
+            completion(places)
+        }
+    }
+    
 }

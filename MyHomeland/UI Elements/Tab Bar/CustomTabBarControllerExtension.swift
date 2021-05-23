@@ -5,7 +5,7 @@ extension TabBarController {
     func UISetup() {
         self.view.backgroundColor = ColorsCollection.defaultColor
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tabBar.frame.width, height: tabBar.frame.height))
-        view.backgroundColor = .clear
+        view.backgroundColor = ColorsCollection.defaultColor
         self.shadows(for: view)
         self.shapes(for: view)
         tabBar.addSubview(view)

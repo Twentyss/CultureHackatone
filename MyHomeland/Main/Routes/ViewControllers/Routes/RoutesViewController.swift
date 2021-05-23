@@ -1,10 +1,7 @@
 import UIKit
 
 class RoutesViewController: UIViewController {
-
- 
     @IBOutlet weak var addRoute: CustomButton!
-    
     @IBOutlet weak var routesCollectionView: UICollectionView!
     
     var viewModel: RoutesViewModel! {
@@ -15,11 +12,8 @@ class RoutesViewController: UIViewController {
         }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel = RoutesViewModel()
     }
 }
@@ -36,9 +30,7 @@ extension RoutesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.viewModel = CellViewModel(with: viewModel.routes[indexPath.item])
         
         return cell
-    }
-    
-    
+    }    
 }
 
 extension RoutesViewController: UICollectionViewDelegateFlowLayout {

@@ -1,5 +1,6 @@
 import FirebaseDatabase
 import CoreLocation
+import SwiftyJSON
 
 extension AppDatabase {
     
@@ -9,15 +10,11 @@ extension AppDatabase {
         }
     }
     
+    
     private func get(placeFrom snapshot: DataSnapshot, placeID id: String) -> Place? {
-        if let value = snapshot.value as? [String: Any], let name = value["name"] as? String {
-            let imageURL = value["image"] as? String ?? ""
-            let category = value["category"] as? String ?? ""
-            let stars = value["countStars"] as? Double ?? 0
-            let latitude = value["latitude"] as? Double ?? 0
-            let longitude = value["longitude"] as? Double ?? 0
-            let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
-            return Place(id: id, name: name, imageURL: imageURL, category: PlaceCategory.init(rawValue: category) ?? .other, stars: stars, location: location)
+        if let value = snapshot.value as? [String: Any], let _ = value["name"] as? String {
+            let jsonValue = JSON(value)
+            return Place(id: value.keys.first!, json: jsonValue)
         }
         else {
             return nil
@@ -48,4 +45,8 @@ extension AppDatabase {
         self.reference.child("placeRejected").child(id).removeObserver(withHandle: observerID)
     }
     
+    func addRoute(with route: Route) {
+        
+        self.reference.child("routes").child(route.routeID).setValue(route.toDictionary())
+    }
 }
